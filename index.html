@@ -5,12 +5,24 @@
   <title>Boston Weather Widget</title>
 </head>
 <body style="margin:0; padding:0; display:flex; justify-content:center; align-items:center; height:100vh; background:#fff;">
-  <iframe 
-    src="https://weatherwidget.io/w/#/?id=weatherwidget-io-0&city=Boston,US&theme=sky&unit=us" 
-    width="100%" 
-    height="400" 
-    frameborder="0" 
-    scrolling="no">
-  </iframe>
+  <a class="weatherwidget-io" 
+     href="https://forecast7.com/en/42d36n71d06/boston/?unit=us" 
+     data-label_1="BOSTON" 
+     data-label_2="WEATHER" 
+     data-theme="sky">
+     BOSTON WEATHER
+  </a>
+
+  <script>
+    !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+      }
+    }(document,'script','weatherwidget-io-js');
+  </script>
 </body>
 </html>
