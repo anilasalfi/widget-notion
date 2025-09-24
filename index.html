@@ -10,28 +10,23 @@
      href="https://forecast7.com/en/42d36n71d06/boston/?unit=us"
      data-label_1="BOSTON"
      data-label_2="WEATHER"
-     data-theme="sky"
-     data-basecolor="#ffffff"
-     data-accent="#1e90ff"
-     data-highcolor="#ff4500"
-     data-lowcolor="#1e90ff"
-     data-suncolor="#ffdd00"
-     data-mooncolor="#888888"
-     data-cloudfill="#cccccc">
+     data-theme="sky">
      BOSTON WEATHER
   </a>
 
-  <!-- Script -->
-  <script>
-    !function(d,s,id){
-      var js,fjs=d.getElementsByTagName(s)[0];
-      if(!d.getElementById(id)){
-        js=d.createElement(s);
-        js.id=id;
-        js.src='https://weatherwidget.io/js/widget.min.js';
-        fjs.parentNode.insertBefore(js,fjs);
-      }
-    }(document,'script','weatherwidget-io-js');
+  <!-- Load widget after DOM -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+      !function(d,s,id){
+        var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src='https://weatherwidget.io/js/widget.min.js';
+          fjs.parentNode.insertBefore(js,fjs);
+        }
+      }(document,'script','weatherwidget-io-js');
+    });
   </script>
 </body>
 </html>
