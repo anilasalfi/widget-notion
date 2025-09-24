@@ -2,33 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Boston Weather Widget (Debug)</title>
+  <title>Boston Weather Widget (Iframe)</title>
 </head>
 <body style="margin:0; padding:20px; font-family:sans-serif; background:#f4f4f4;">
   
   <h1 style="color:#333; text-align:center;">✅ Hello World – Page Loaded</h1>
-  <p style="text-align:center;">If you see this text, GitHub Pages is working. Now let's test the weather widget below:</p>
+  <p style="text-align:center;">Below is the weather widget (iframe version, works in Notion too):</p>
 
   <div style="display:flex; justify-content:center; margin-top:30px;">
-    <a class="weatherwidget-io" 
-       href="https://forecast7.com/en/42d36n71d06/boston/?unit=us" 
-       data-label_1="BOSTON" 
-       data-label_2="WEATHER" 
-       data-theme="sky">
-       BOSTON WEATHER
-    </a>
+    <iframe 
+      src="https://forecast7.com/en/42d36n71d06/boston/?unit=us" 
+      frameborder="0" 
+      width="400" 
+      height="300">
+    </iframe>
   </div>
 
-  <script>
-    !function(d,s,id){
-      var js,fjs=d.getElementsByTagName(s)[0];
-      if(!d.getElementById(id)){
-        js=d.createElement(s);
-        js.id=id;
-        js.src='https://weatherwidget.io/js/widget.min.js';
-        fjs.parentNode.insertBefore(js,fjs);
-      }
-    }(document,'script','weatherwidget-io-js');
-  </script>
 </body>
 </html>
