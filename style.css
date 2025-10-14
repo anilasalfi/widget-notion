@@ -1,7 +1,4 @@
-/* Import ChatGPT-like font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-
-/* Global page styles */
+/* ---- Page Setup ---- */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -10,53 +7,15 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center; /* centers vertically */
   height: 100vh;
+  overflow: hidden; /* prevents double scrollbars */
 }
 
-/* Scrollable updates container */
+/* ---- Updates Box ---- */
 .updates-box {
-  width: 400px;
-  height: 260px; /* fixed height for scroll */
-  overflow-y: auto;
   background: #ffffff;
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  padding: 16px;
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: rgba(0,0,0,0.2) transparent;
-}
-
-/* Update entries */
-.update {
-  border-bottom: 1px solid #f0f0f0;
-  padding: 10px 0;
-  line-height: 1.5;
-}
-
-.update:last-child {
-  border-bottom: none;
-}
-
-/* Date line */
-.date {
-  color: #666;
-  font-size: 12px;
-  font-weight: 500;
-  margin-bottom: 3px;
-}
-
-/* Message line */
-.update div:last-child {
-  font-size: 14px;
-  color: #222;
-}
-
-/* Smooth scrollbar (WebKit browsers) */
-.updates-box::-webkit-scrollbar {
-  width: 6px;
-}
-
-.updates-box::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.
+  width: 400px;
+  max-height: 400px;
+  overflow-y: auto; /* scroll inside box */
+  border-radius
