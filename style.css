@@ -1,4 +1,7 @@
-/* ---- Page Setup ---- */
+/* Import ChatGPT-like font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Global page styles */
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
                Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -7,68 +10,59 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center; /* centers vertically */
+  align-items: flex-start;
   height: 100vh;
-  overflow: hidden; /* prevents double scrollbars */
 }
 
-/* ---- Updates Box ---- */
+/* Scrollable updates container */
 .updates-box {
-  background: #ffffff;
   width: 400px;
-  max-height: 400px;
-  overflow-y: auto; /* scroll inside box */
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 20px;
-  box-sizing: border-box;
+  height: 260px; /* fixed height for scroll */
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 16px;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
 }
 
-/* ---- Header ---- */
-.updates-box h2 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-  color: #202123;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 6px;
-  font-weight: 600;
-}
-
-/* ---- Individual Updates ---- */
+/* Update entries */
 .update {
-  margin-bottom: 16px;
-  padding-bottom: 10px;
   border-bottom: 1px solid #f0f0f0;
+  padding: 10px 0;
+  line-height: 1.5;
 }
 
 .update:last-child {
   border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
-.update-date {
-  font-size: 0.9rem;
-  color: #6b7280;
-  margin-bottom: 4px;
+/* Date line */
+.date {
+  color: #666;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 3px;
 }
 
-.update-text {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.4;
+/* Message line */
+.update div:last-child {
+  font-size: 14px;
+  color: #222;
 }
 
-/* ---- Scrollbar Styling ---- */
+/* Smooth scrollbar (WebKit browsers) */
 .updates-box::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 .updates-box::-webkit-scrollbar-thumb {
-  background-color: #cfcfcf;
-  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
 }
 
-.updates-box::-webkit-scrollbar-thumb:hover {
-  background-color: #a8a8a8;
+.updates-box::-webkit-scrollbar-track {
+  background: transparent;
 }
