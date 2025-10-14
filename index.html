@@ -2,21 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Boston Weather Widget (Iframe)</title>
+  <title>Team Updates</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .updates-box {
+      width: 400px;
+      height: 250px;
+      overflow-y: auto;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 12px;
+    }
+    .update {
+      border-bottom: 1px solid #eee;
+      padding: 8px 0;
+    }
+    .update:last-child {
+      border-bottom: none;
+    }
+    .date {
+      color: #777;
+      font-size: 12px;
+    }
+  </style>
 </head>
-<body style="margin:0; padding:20px; font-family:sans-serif; background:#f4f4f4;">
-  
-  <h1 style="color:#333; text-align:center;">✅ Hello World – Page Loaded</h1>
-  <p style="text-align:center;">Below is the weather widget (iframe version, works in Notion too):</p>
-
-  <div style="display:flex; justify-content:center; margin-top:30px;">
-    <iframe 
-      src="https://forecast7.com/en/42d36n71d06/boston/?unit=us" 
-      frameborder="0" 
-      width="400" 
-      height="300">
-    </iframe>
+<body>
+  <div class="updates-box">
+    <div class="update">
+      <div class="date">Oct 14, 2025</div>
+      <div>Team meeting rescheduled to Wednesday.</div>
+    </div>
+    <div class="update">
+      <div class="date">Oct 10, 2025</div>
+      <div>New sprint goals published in the tracker.</div>
+    </div>
+    <div class="update">
+      <div class="date">Oct 3, 2025</div>
+      <div>Welcome Terrence and Orane to the team 🎉</div>
+    </div>
   </div>
-
 </body>
 </html>
